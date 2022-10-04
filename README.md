@@ -16,7 +16,7 @@ choco upgrade chocolatey -y || Set-ExecutionPolicy Bypass -Scope Process -Force;
 
 Install
 
-```
+```pwsh
 choco upgrade curl -y
 ```
 
@@ -24,7 +24,7 @@ choco upgrade curl -y
 
 Install
 
-```
+```pwsh
 choco upgrade git -y
 ```
 
