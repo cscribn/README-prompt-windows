@@ -2,15 +2,23 @@
 
 ## Windows
 
-All commands should be executed via Windows Powershell, run as Administrator, unless otherwise specified.
-
 ### Chocolatey
 
-Install
+Install via PowerShell
 
 ```pwsh
-choco upgrade chocolatey -y || Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
+
+### PowerShell Core
+
+Install via PowerShell
+
+```pwsh
+winget install --id Microsoft.Powershell --source winget
+```
+
+Perform remaining steps using PowerShell Core unless otherwise stated.
 
 ### Curl
 
@@ -54,6 +62,19 @@ Remove-Item -Recurse -Force "$Env:USERPROFILE\.config\oh-my-posh"
 git clone https://github.com/cscribn/config-oh-my-posh.git  "$Env:USERPROFILE\.config\oh-my-posh"
 ```
 
+### PowerShell Core Continued
+
+```pwsh
+Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module posh-git -Force
+Install-Module PSReadLine -AllowPrerelease -Force
+Set-Location "$Env:USERPROFILE\Documents\PowerShell"
+
+curl -Lo "Microsoft.PowerShell_profile.ps1" https://raw.githubusercontent.com/cscribn/config-misc/main/powershell-core/Microsoft.PowerShell_profile.ps1
+
+Set-Location -
+```
+
 ### Zsh
 
 Install
@@ -87,18 +108,6 @@ Configure
 1. Window -> Appearance -> Font to "MeslowLGS NF"
 1. Font Quality = Anti-Aliased
 
-### PowerShell Core
-
-Install
-
-```pwsh
-choco upgrade powershell-core -y
-
-Install-Module -Name Terminal-Icons -Repository PSGallery
-
-Install-Module PSReadLine -AllowPrerelease -Force
-```
-
 ### ConEmu (Windows < 10)
 
 Install
@@ -125,6 +134,13 @@ Install
 
 ```pwsh
 choco upgrade vim -y
+
+Set-Location "$Env:USERPROFILE"
+
+curl -Lo ".vimrc" https://raw.githubusercontent.com/cscribn/config-misc/main/vim/vimrc
+Copy-Item ".vimrc" -Destination "_vimrc"
+
+Set-Location -
 ```
 
 ### Visual Studio Code
