@@ -1,4 +1,6 @@
-# Under Construction :construction: README-shells
+# README-prompt-windows
+
+Instructions on how to get your Windows prompts to look like the following.
 
 ## Windows
 
