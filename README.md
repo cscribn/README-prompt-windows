@@ -1,6 +1,8 @@
 # README-prompt-windows
 
-Instructions on how to get your Windows prompts to look like the following.
+Instructions on how to make Windows prompts to look like the following.
+
+![prompt](./images/prompt.png)
 
 ## Windows
 
