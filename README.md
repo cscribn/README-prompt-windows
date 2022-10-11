@@ -4,9 +4,7 @@ Instructions on how to make your Microsoft Windows prompts to look like the foll
 
 ![prompt](./images/prompt.png)
 
-## Windows
-
-### Chocolatey
+## Chocolatey
 
 Install via PowerShell
 
@@ -14,7 +12,7 @@ Install via PowerShell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-### PowerShell Core
+## PowerShell Core
 
 Install via PowerShell
 
@@ -24,7 +22,7 @@ winget install --id Microsoft.Powershell --source winget
 
 Note: Perform remaining steps using PowerShell Core unless otherwise stated.
 
-### Curl
+## Curl
 
 Install
 
@@ -32,7 +30,7 @@ Install
 choco upgrade curl -y
 ```
 
-### Git
+## Git
 
 Install
 
@@ -40,7 +38,7 @@ Install
 choco upgrade git -y
 ```
 
-### Fonts
+## Fonts
 
 Install
 
@@ -50,7 +48,7 @@ curl -Lo "$Env:Windir\Fonts\Meslo LG S Regular Nerd Font Complete Windows Compat
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "MesloLGS NF" /t REG_SZ /d "Meslo LG S Regular Nerd Font Complete Windows Compatible.ttf" /f
 ```
 
-### Oh-My-Posh
+## Oh-My-Posh
 
 Install
 
@@ -61,7 +59,7 @@ Remove-Item -Recurse -Force "$Env:USERPROFILE\.config\oh-my-posh"
 git clone https://github.com/cscribn/config-oh-my-posh.git  "$Env:USERPROFILE\.config\oh-my-posh"
 ```
 
-### PowerShell Core Continued
+## PowerShell Core Continued
 
 ```pwsh
 Install-Module -Name Terminal-Icons -Repository PSGallery
@@ -71,7 +69,7 @@ Install-Module PSReadLine -AllowPrerelease -Force
 curl -Lo "$Env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" https://raw.githubusercontent.com/cscribn/config-misc/main/powershell-core/Microsoft.PowerShell_profile.ps1
 ```
 
-### Zsh
+## Zsh
 
 Install
 
@@ -87,7 +85,7 @@ Remove-Item -Recurse -Force "$Env:USERPROFILE\.zsh\zsh-autosuggestions"
 Remove-Item -Recurse -Force "$Env:USERPROFILE\.zsh\zsh-syntax-highlighting"
 ```
 
-### Kitty
+## Kitty
 
 Install
 
@@ -100,7 +98,7 @@ Configure
 1. Window -> Appearance -> Font to "MeslowLGS NF"
 1. Font Quality = Anti-Aliased
 
-### ConEmu (Windows < 10)
+## ConEmu (Windows < 10)
 
 Install
 
@@ -110,7 +108,7 @@ choco upgrade conemu -y
 curl -Lo "$Env:APPDATA\ConEmu.xml" https://raw.githubusercontent.com/cscribn/config-misc/main/conemu/ConEmu.xml
 ```
 
-### Microsoft Windows Terminal (Windows >= 10)
+## Microsoft Windows Terminal (Windows >= 10)
 
 Install
 
@@ -121,7 +119,7 @@ $LocalStateDir = Get-ChildItem -Path "$Env:LOCALAPPDATA\Packages\Microsoft.Windo
 curl -Lo "$LocalStateDir\settings.json" https://raw.githubusercontent.com/cscribn/config-misc/main/microsoft-windows-terminal/LocalState/settings.json
 ```
 
-### Vim
+## Vim
 
 Install
 
@@ -135,7 +133,7 @@ Copy-Item ".vimrc" -Destination "_vimrc"
 Set-Location -
 ```
 
-### Visual Studio Code
+## Visual Studio Code
 
 Install
 
