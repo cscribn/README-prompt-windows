@@ -14,11 +14,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ## PowerShell Core
 
-Install via PowerShell
-
-```pwsh
-winget install --id Microsoft.Powershell --source winget
-```
+Download and install the lates PowerShell Core release from [GitHub](https://github.com/PowerShell/PowerShell/releases).
 
 Note: Perform remaining steps using PowerShell Core unless otherwise stated.
 
