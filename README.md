@@ -76,7 +76,6 @@ git clone https://github.com/cscribn/config-zsh.git  "$Env:USERPROFILE\.config\z
 
 Copy-Item -Recurse -Force -Path "$Env:USERPROFILE\.config\zsh\zsh.pkg\*" -Destination "C:\Program Files\Git"
 Copy-Item -Force -Path "$Env:USERPROFILE\.config\zsh\zshrc-win" -Destination "$Env:USERPROFILE\.zshrc"
-Remove-Item -Recurse -Force "$Env:USERPROFILE\.zsh\zsh-autocomplete"
 Remove-Item -Recurse -Force "$Env:USERPROFILE\.zsh\zsh-autosuggestions"
 Remove-Item -Recurse -Force "$Env:USERPROFILE\.zsh\zsh-syntax-highlighting"
 ```
