@@ -50,7 +50,6 @@ Install
 
 ```pwsh
 choco upgrade oh-my-posh -y
-Remove-Item -Recurse -Force "$Env:USERPROFILE\.config\oh-my-posh"
 
 git clone https://github.com/cscribn/config-oh-my-posh.git  "$Env:USERPROFILE\.config\oh-my-posh"
 ```
@@ -70,14 +69,10 @@ curl -Lo "$Env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 Install
 
 ```pwsh
-Remove-Item -Recurse -Force "$Env:USERPROFILE\.config\zsh"
-
 git clone https://github.com/cscribn/config-zsh.git  "$Env:USERPROFILE\.config\zsh"
 
 Copy-Item -Recurse -Force -Path "$Env:USERPROFILE\.config\zsh\zsh.pkg\*" -Destination "C:\Program Files\Git"
 Copy-Item -Force -Path "$Env:USERPROFILE\.config\zsh\zshrc-win" -Destination "$Env:USERPROFILE\.zshrc"
-Remove-Item -Recurse -Force "$Env:USERPROFILE\.zsh\zsh-autosuggestions"
-Remove-Item -Recurse -Force "$Env:USERPROFILE\.zsh\zsh-syntax-highlighting"
 ```
 
 ## Kitty
