@@ -64,6 +64,14 @@ Install-Module PSReadLine -AllowPrerelease -Force
 curl -Lo "$Env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" https://raw.githubusercontent.com/cscribn/config-misc/main/powershell-core/Microsoft.PowerShell_profile.ps1
 ```
 
+## Lsd
+
+Install
+
+```pwsh
+choco upgrade lsd -y
+```
+
 ## Zsh
 
 Install
