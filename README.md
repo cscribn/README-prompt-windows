@@ -74,13 +74,27 @@ choco upgrade lsd -y
 
 ## Zsh
 
+Install the [git-sdk for Windows](https://github.com/git-for-windows/build-extra/releases/latest)
+
+Install Pacman
+
+```pwsh
+# 64-bit git-sdk assumed
+Copy-Item "C:\git-sdk-64\usr\bin\pacman.exe" -Destination "C:\Program Files\Git\usr\bin"
+Copy-Item "C:\git-sdk-64\etc\pacman.conf" -Destination "C:\Program Files\Git\etc"
+Copy-Item -Recurse "C:\git-sdk-64\etc\pacman.d" -Destination "C:\Program Files\Git\etc"
+Copy-Item -Recurse "C:\git-sdk-64\var" -Destination "C:\Program Files\Git"
+
+Invoke-Expression "bash.exe -c -i `"pacman -S --noconfirm pacman`""
+```
+
 Install
 
 ```pwsh
 git clone https://github.com/cscribn/config-zsh.git  "$Env:USERPROFILE\.config\zsh"
 
-Copy-Item -Recurse -Force -Path "$Env:USERPROFILE\.config\zsh\zsh.pkg\*" -Destination "C:\Program Files\Git"
 Copy-Item -Force -Path "$Env:USERPROFILE\.config\zsh\zshrc-win" -Destination "$Env:USERPROFILE\.zshrc"
+Copy-Item -Recurse -Force -Path "$Env:USERPROFILE\.config\zsh\zsh.ico" -Destination "C:\Program Files\Git\usr\share\icons\locolor\32x32\apps"
 ```
 
 ## Kitty
