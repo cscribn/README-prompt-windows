@@ -57,9 +57,9 @@ git clone https://github.com/cscribn/config-oh-my-posh.git  "$Env:USERPROFILE\.c
 ## PowerShell Core Continued
 
 ```pwsh
-Install-Module -Name Terminal-Icons -Repository PSGallery
 Install-Module posh-git -Force
 Install-Module PSReadLine -AllowPrerelease -Force
+Install-Module -Name Terminal-Icons -Repository PSGallery
 
 curl -Lo "$Env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" https://raw.githubusercontent.com/cscribn/config-misc/main/powershell-core/Microsoft.PowerShell_profile.ps1
 ```
@@ -165,6 +165,6 @@ Edit settings.json
         "icon": "terminal",
         "overrideName": true
     }
-    "terminal.integrated.fontFamily": "MeslowLGS NF",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
     "terminal.integrated.fontSize": 13,
 ```
