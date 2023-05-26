@@ -89,6 +89,8 @@ Invoke-Expression "bash.exe -c -i `"pacman -S --noconfirm pacman`""
 Install
 
 ```pwsh
+Invoke-Expression "bash.exe -c -i `"pacman -S --needed --noconfirm --overwrite \* zsh`""
+
 git clone https://github.com/cscribn/config-zsh.git  "$Env:USERPROFILE\.config\zsh"
 
 Copy-Item -Force -Path "$Env:USERPROFILE\.config\zsh\zshrc-win" -Destination "$Env:USERPROFILE\.zshrc"
